@@ -1,0 +1,152 @@
+.hole-container{
+    
+    
+}
+.cart1{
+    background-color:lightgray;
+    background-size: cover;
+    padding:30px;
+   
+    border-radius: 10px;
+}
+.container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.heading{
+    font-size: 30px;
+    font-weight: 600;
+}
+.button{
+    padding:10px;
+    font-size: 15px;
+}
+.cart{
+    display: flex;
+    justify-content: space-around;
+    width:500px;   
+}
+.price{
+    margin-left: 10px;
+}
+.container2{
+    display: flex;
+    justify-content: space-between;
+}
+.line{
+    background-color: black;
+    border: solid 1px;
+}
+h4{
+ font-size: 25px;
+}
+
+@media  screen and (max-width: 768px) {
+    .container1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .heading{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .button{
+        padding:10px;
+        font-size: 15px;
+    }
+    .cart{
+        display: flex;
+        justify-content: space-around;
+        width:500px;
+        
+    }
+    .container2{
+        display: flex;
+        justify-content: space-between;
+    }
+    .line{
+        background-color: black;
+        border: solid 1px;
+    }
+    h4{
+     font-size: 25px;
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media screen and (max-width: 480px) {
+    .container1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .heading{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .button{
+        padding:10px;
+        font-size: 15px;
+    }
+    .cart{
+        display: flex;
+        justify-content: space-between;
+        width:600px;
+    }
+    .container2{
+        display: flex;
+        justify-content: space-between;
+    }
+    .line{
+        background-color: black;
+        border: solid 1px;
+    }
+    h4{
+     font-size: 25px;
+    }
+  }
+  
+
+.item-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .item img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+  
+ .container3{
+    display: flex;
+    justify-content: space-between;
+ }
+ .container3{
+    display: flex;
+    justify-content: space-between;
+ }
+ .text{
+  
+ } 
+ .container4{
+  background-color: cornflowerblue;
+  height:100vh;
+  
+
+ }
+ 
