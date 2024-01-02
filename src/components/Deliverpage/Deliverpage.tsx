@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import "./Deliverpage.css"
+
+
+
 const Deliverpage = () => {
-  const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
+  const [showForm, setShowForm] = useState<boolean>(false);
+  const [formData, setFormData] = useState<any>({
     name: '',
     state: '',
     district: '',
@@ -14,12 +17,14 @@ const Deliverpage = () => {
     phoneNumber: '',
    
   });
-  const [displayData, setDisplayData] = useState(null);
-  const [selectedOption, setSelectedOption] = useState('');
 
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+  const [displayData, setDisplayData] = useState<any>(null);
+  const listItems = ['Cash On Delivery', 'Online Payment'];
+
+  const listItems1 = ['Items', 'Delivery' , 'GST-(5%)'];
+  const listItems2 = ['3478', '68' , '7865.34'];
+
+  
 
   const toggleForm = () => {
     setShowForm(!showForm);
@@ -42,7 +47,7 @@ const Deliverpage = () => {
   return (
     <div className="flex flex-col lg:flex-row justify-center">
       <div className='bg-slate-300 p-5 m-3 lg:w-1/2' > 
-        <h1 className='text-red-600 text-3xl text-center'>Deliver to</h1>
+        <h1 className='text-red-600 text-3xl text-center font-bold'>Deliver to</h1>
         <p className="border border-black p-4 rounded-md bg-white">Select Address or add a new address</p>
         <button className="bg-red-500 text-white px-4 py-2 rounded-md mt-5" onClick={toggleForm}>
          Add New Address
@@ -144,7 +149,7 @@ const Deliverpage = () => {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="w-full sm:w-1/2">
+                <div className="w-full sm:w-1/2"> 
                   <input
                     type="tel"
                     id="phoneNumber"
@@ -153,11 +158,9 @@ const Deliverpage = () => {
                     placeholder="Enter phone number"
                     value={formData.phoneNumber}
                     onChange={handleChange}
-                  />
+                     />
                 </div>
-              </div>
-              
-              
+              </div>      
               
               
             </div>
@@ -168,69 +171,49 @@ const Deliverpage = () => {
         )}
         
         {displayData && (
-          <div className="m-3 border border-gray-400 p-4 rounded-md bg-white">
+          <div className="m-3 border  p-4  bg-white">
             <h2 className="text-lg font-semibold mb-2">Address Details:</h2>
             <p>Name: {displayData.name}</p>
             <p>State: {displayData.state}</p>
-            <p>District: {displayData.district}</p>
-           
+           <p>District: {displayData.district}</p>           
             <p>Address: {displayData.address}</p>
             <p>Locality: {displayData.locality}</p>
             <p>City: {displayData.city}</p>
             <p>Landmark: {displayData.landmark}</p>
             <p>PIN: {displayData.pin}</p>
-            <p>Phone Number: {displayData.phoneNumber}</p>
-            
-            
+            <p>Phone Number: {displayData.phoneNumber}</p>  
           </div>
         )}
       </div>
     
       <div className='lg:w-2/5'>
-      <div className='m-3 bg-slate-300  h-60'>
-        <h1 className='text-red-600 text-3xl text-center p-3 font-bold '>Pay With</h1> 
+      <div className='m-3 bg-slate-300 p-5 h-40'>
+        <h1 className='text-red-600 text-2xl text-center font-bold '>Pay With</h1> 
          <div className='text-center'>
-         <div>
-        <label>
-          <input
-            type="radio"
-            value="option1"
-            checked={selectedOption === 'option1'}
-            onChange={handleOptionChange}
-          />
-         Cash On delivery
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="radio"
-            value="option2"
-            checked={selectedOption === 'option2'}
-            onChange={handleOptionChange}
-          />
-          Online Payment
-        </label>
-      </div>
-
+         <ul className='list-square'>
+          {listItems.map((item, index) => (
+            <li key={index} className=" text-1xl mt-3">{item}</li>
+          ))}
+        </ul>
+     
          </div>
         
       </div>
-      <div className='bg-slate-300 p-5 m-3  '>
+      <div className='bg-slate-300 p-5 m-3 h-80'>
         <h1 className='text-red-600 text-center font-bold text-3xl'> Orders Summary</h1>
         <div className='flex justify-around mt-3 mb-3'>
           <div>
-            <h2 className='text-1xl'>Items</h2>
-            <h2 className='text-1xl'>Delivary</h2>
-            <h2 className='text-1xl'>GST-(5%)</h2>
+          {listItems1.map((item, index) => (
+        <h1 key={index} className="mt-4">{item}</h1>
+      ))}
           </div>
           <div>
-            <h2 className='text-1xl'>2495</h2>
-            <h2 className='text-1xl'>50</h2>
-            <h2 className='text-1xl'>12.43</h2>
+          {listItems2.map((item, index) => (
+        <h1 key={index} className="mt-4 ">{item}</h1>
+      ))}
           </div>
         </div>
-        <hr className='bg-dark border'/>
+        <hr className='bg-black'/>
         <div className='flex justify-around'>
           <div>
             <h1 className='text-red-600 text-2xl font-bold'>Order Total:</h1>
@@ -241,13 +224,11 @@ const Deliverpage = () => {
         </div>
 
       </div>
-      <button className='bg-red-500 text-white text-center w-2/5 px-4 py-2 rounded-md mt-5 ml-3' type="button">Place Order</button>
-      </div>
-      
-      </div>
-     
-   
+      <button className='bg-red-500 text-white text-center lg:w-2/5 p-3 rounded-md ml-3' type="button">Place Order</button>
+      </div>      
+      </div>     
   );
 };
 
 export default Deliverpage;
+

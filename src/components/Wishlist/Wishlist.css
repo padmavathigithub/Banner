@@ -8,6 +8,9 @@
       display: flex;
       justify-content: space-between;
     }
+    .imgs{
+      margin-left: 2rem;
+    }
   
     .price {
     
@@ -25,10 +28,11 @@
     .price {
       
         margin-left: 5.25rem;
-      }
-    
+    }
+   
   }
-  .button{
+
+   .button{
     border:solid 1px gray;
     padding:5px;
   }

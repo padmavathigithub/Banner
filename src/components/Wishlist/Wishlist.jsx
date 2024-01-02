@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IoMdClose } from 'react-icons/io'; 
+
 import "./Wishlist.css"
 
 const Wishlist = () => {
@@ -22,6 +23,7 @@ const Wishlist = () => {
       price: 20, 
       imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOxpV6h6O3sRFPctf_Znla7KTOfrsEK0DYrLVKYJXgug&s' 
     },
+
     { id: 4, 
       name: 'Nest Thermostat', 
       price: 25, 
@@ -61,11 +63,11 @@ const Wishlist = () => {
         <div key={product.id}>
           <div className='flex justify-around items-center m-3 container'>
             <div className='flex justify-center items-center img' >
-          <img src={product.imageUrl} alt={product.name} className='h-32'/>
+          <img src={product.imageUrl} alt={product.name} className='h-32 imgs'/>
           <p className='ml-5 text-blue-950 font-bold text-1xl'>{product.name}</p>
           </div>          
           <div>
-          <p className='text-3xl price '>${product.price}</p>
+          <p className='text-3xl price '>${product.price}</p>    
           </div>
           <div>
             <button className='button' type="button">

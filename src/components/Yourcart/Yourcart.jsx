@@ -3,7 +3,7 @@ import { RiChatDeleteLine } from "react-icons/ri";
 import './Yourcart.css';
 
 const Yourcart = () => {
-  const [items, setItems] = useState([
+  const [items, setItems] = useState<any>([
     {
       id: 1,
       imageSrc: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71GqQyjhq6L._AC_UF894,1000_QL80_.jpg',
