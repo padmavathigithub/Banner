@@ -100,9 +100,9 @@ function createData(
   date: string,
   image:string,
   price: number,
-  address:string,
-  trackingid:number,
+  address:string,  
   status: string,
+  trackingid:number,
 ): Data {
   return { order, date,image, price,address, status ,trackingid,};
 }
